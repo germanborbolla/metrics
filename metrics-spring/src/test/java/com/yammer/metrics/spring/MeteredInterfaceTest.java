@@ -18,11 +18,6 @@ public class MeteredInterfaceTest {
         this.ctx = new ClassPathXmlApplicationContext("classpath:metered-interface.xml");
     }
 
-    @After
-    public void destroy() {
-        ctx.getBean(MetricsRegistry.class).shutdown();
-    }
-
     @Test
     public void testMeteredInterface() {
         MeteredInterface mi = ctx.getBean(MeteredInterface.class);

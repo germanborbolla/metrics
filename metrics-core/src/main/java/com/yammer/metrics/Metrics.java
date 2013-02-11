@@ -337,7 +337,6 @@ public class Metrics {
      * Shuts down all thread pools for the default registry.
      */
     public static void shutdown() {
-        DEFAULT_REGISTRY.shutdown();
         JmxReporter.shutdownDefault();
         Runtime.getRuntime().removeShutdownHook(SHUTDOWN_HOOK);
     }
